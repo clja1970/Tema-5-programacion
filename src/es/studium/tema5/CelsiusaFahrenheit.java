@@ -12,7 +12,7 @@ import java.awt.event.WindowListener;
 
 
 
-public class Ejercicio1 extends Frame implements ActionListener, WindowListener
+public class CelsiusaFahrenheit extends Frame implements ActionListener, WindowListener
 {
 	private static final long serialVersionUID = 1L;
 	//Creamos los botones
@@ -26,7 +26,7 @@ public class Ejercicio1 extends Frame implements ActionListener, WindowListener
 	TextField txtFahrenheit = new TextField(20);
 	
 	//Constructor
-	public Ejercicio1()
+	public CelsiusaFahrenheit()
 	{
 		setTitle("Conversion de Temperaturas");
 		setLayout(new GridLayout(3,2));//4ª
@@ -50,7 +50,7 @@ public class Ejercicio1 extends Frame implements ActionListener, WindowListener
 
 	public static void main(String[] args)
 	{
-		new Ejercicio1();
+		new CelsiusaFahrenheit();
 	}
 
 

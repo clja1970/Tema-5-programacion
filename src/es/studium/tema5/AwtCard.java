@@ -59,6 +59,8 @@ add( "Center",card );
 // Establecer el tamaño del Frame
 setSize(200,200);
 // Añadir los Listeners
+setLocationRelativeTo(null);
+setResizable(false);
 addWindowListener(this);
 c.addItemListener(this);
 // Mostrar el Frame en pantalla
@@ -83,8 +85,7 @@ public void windowIconified(WindowEvent we) {}
 public void windowOpened(WindowEvent we) {}
 public void itemStateChanged(ItemEvent ie)
 {
-Object a = new Object();//¿No usada?
-a = ie.getSource();
+
 // El tratamiento se hace igual que para los checkboxes
 if(PanelBoton.equals(ie.getItem()))
 {
