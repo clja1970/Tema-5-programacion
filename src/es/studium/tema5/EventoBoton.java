@@ -3,6 +3,7 @@ package es.studium.tema5;
 import java.awt.Button;
 import java.awt.FlowLayout;
 import java.awt.Frame;
+import java.awt.TextField;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
@@ -15,11 +16,12 @@ public class EventoBoton implements ActionListener, WindowListener
         Button btnCancelar = new Button("Cancelar");
         Button btnVolver = new Button("Volver");
         Button btnSalir = new Button("Salir");
+        TextField texto = new TextField(30);
 
         public EventoBoton()
         {
                 ventana.setTitle("Eventos");
-                ventana.setSize(230,100);
+                ventana.setSize(330,150);
                 ventana.setLayout(new FlowLayout());
                 btnAceptar.addActionListener(this);
                 btnCancelar.addActionListener(this);
@@ -30,6 +32,7 @@ public class EventoBoton implements ActionListener, WindowListener
                 ventana.add(btnCancelar);
                 ventana.add(btnVolver);
                 ventana.add(btnSalir);
+                ventana.add(texto);
                 ventana.setResizable(false);
                 ventana.setLocationRelativeTo(null);
                 ventana.setVisible(true);
@@ -45,19 +48,20 @@ public class EventoBoton implements ActionListener, WindowListener
         {
                 if(eventoGenerado.getSource().equals(btnAceptar))
                 {
-                        System.out.println("Pulsaste el botón ACEPTAR...");
+                        texto.setText("Pulsaste el botÃ³n ACEPTAR...");
                 }
                 else if(eventoGenerado.getSource().equals(btnCancelar))
                 {
-                        System.out.println("Pulsaste el botón CANCELAR...");
+                	texto.setText(" Has pulsado Cancelar");
                 }
                 else if(eventoGenerado.getSource().equals(btnVolver))
                 {
-                        System.out.println("Pulsaste el botón VOLVER...");
+                	texto.setText("Pulsaste el botÃ³n VOLVER...");
                 }
                 else if(eventoGenerado.getSource().equals(btnSalir))
                 {
                         System.out.println("Hasta luego Lucas...");
+                        
                         System.exit(0);
                 }
         }
@@ -92,7 +96,7 @@ public class EventoBoton implements ActionListener, WindowListener
         @Override
         public void windowDeiconified(WindowEvent arg0)
         {
-                System.out.println("Me han restaurado...");
+        	texto.setText("Me han restaurado...");
                 
         }
 
@@ -106,7 +110,7 @@ public class EventoBoton implements ActionListener, WindowListener
         @Override
         public void windowOpened(WindowEvent arg0)
         {
-                // TODO Auto-generated method stub
+        	texto.setText(" Hola Â¿Que tal?");
                 
         }
 }
