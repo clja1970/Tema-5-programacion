@@ -19,7 +19,7 @@ public class CelsiusaFahrenheit extends Frame implements ActionListener, WindowL
 	Button btnC_F = new Button("Celsius a Fahrenheit");
 	Button btnF_C = new Button("Fahrenheit a Celsius");
 	// Creamos las label
-	Label lblCelsius = new Label("Celsius");//3ª
+	Label lblCelsius = new Label("Celsius");//3ï¿½
 	Label lblFahrenheit = new Label("Fahrenheit");
 	// Creamos el texto
 	TextField txtCelsius = new TextField(20);
@@ -29,19 +29,19 @@ public class CelsiusaFahrenheit extends Frame implements ActionListener, WindowL
 	public CelsiusaFahrenheit()
 	{
 		setTitle("Conversion de Temperaturas");
-		setLayout(new GridLayout(3,2));//4ª
+		setLayout(new GridLayout(3,2));//4Âº
 		add(lblCelsius);
 		add(txtCelsius);
 		add(lblFahrenheit);
 		add(txtFahrenheit);
-		//Añadir botones
+		//AÃ±adir botones
 		btnC_F.addActionListener(this);
 		add(btnC_F);
 		btnF_C.addActionListener(this);
 		add(btnF_C);
-		//Añadir LIstener a la ventana
+		//AÃ±adir LIstener a la ventana
 		addWindowListener(this);
-		setSize(650,150);//2ª
+		setSize(650,150);//2ï¿½
 		setLocationRelativeTo(null);
 		setResizable(false);
 		setVisible(true);
@@ -67,7 +67,6 @@ public class CelsiusaFahrenheit extends Frame implements ActionListener, WindowL
 	{
 		System.out.println("Saliendo...");
         System.exit(0);
-		
 	}
 
 
